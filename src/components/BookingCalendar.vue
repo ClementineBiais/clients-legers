@@ -26,11 +26,26 @@ export default {
   data: () => {
     return {
       timeSlotList: [
-        { date: new Date(2022, 1, 2, 1, 0, 0), hour: '15h - 18h', room: "B437", bookedBy: "" },
-        { date: new Date(2021, 1, 2, 1, 0, 0), hour: '15h - 18h', room: "B447", bookedBy: "Victor Martin" },
-        { date: new Date(2021, 1, 2, 1, 0, 0), hour: '18h - 21h', room: "B437", bookedBy: "" },
-        { date: new Date(2022, 0, 1, 1, 0, 0), hour: '9h - 12h', room: "B437", bookedBy: "Cédric Dumas" },
-        { date: new Date(2022, 0, 1, 1, 0, 0), hour: '12h - 15h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '9h - 12h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '9h - 12h', room: "B438", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '9h - 12h', room: "B439", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '9h - 12h', room: "B440", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '12h - 15h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '12h - 15h', room: "B440", bookedBy: "Clémentine Biais" },
+        { date: new Date('2022-1-5 01:00'), hour: '15h - 18h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '15h - 18h', room: "B439", bookedBy: "" },
+        { date: new Date('2022-1-5 01:00'), hour: '15h - 18h', room: "B447", bookedBy: "Victor Martin" },
+        { date: new Date('2022-1-5 01:00'), hour: '18h - 21h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '9h - 12h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '9h - 12h', room: "B438", bookedBy: "Anna S." },
+        { date: new Date('2022-1-6 01:00'), hour: '9h - 12h', room: "B439", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '9h - 12h', room: "B440", bookedBy: "Isuru Haupe" },
+        { date: new Date('2022-1-6 01:00'), hour: '12h - 15h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '12h - 15h', room: "B440", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '15h - 18h', room: "B437", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '15h - 18h', room: "B439", bookedBy: "Glenn Louarn" },
+        { date: new Date('2022-1-6 01:00'), hour: '15h - 18h', room: "B447", bookedBy: "" },
+        { date: new Date('2022-1-6 01:00'), hour: '18h - 21h', room: "B437", bookedBy: "" },
       ],
     }
   },
@@ -58,4 +73,13 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+button {
+  margin: 2px;
+  padding: 5px;
+  border-radius: 2px;
+  background-color: #4287f5;
+  color: #fff;
+  font-weight: bold;
+}
+</style>

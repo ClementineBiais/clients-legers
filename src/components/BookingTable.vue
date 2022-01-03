@@ -11,7 +11,8 @@
             && timeSlot.hour == rowTitle.hour" 
             @click="$emit('selected-timeSlot', timeSlot)">
             <input type="radio" name="timeSlotRadio">
-            <span class="radio-label">{{timeSlot.room + (timeSlot.bookedBy ? '\n Reservée par ' + timeSlot.bookedBy : '')}}</span>
+            <span class="radio-label-room">{{ timeSlot.room }}
+            <span class="radio-label-booked" v-if="timeSlot.bookedBy">{{ timeSlot.bookedBy }}</span></span>
           </td>
         </label>
       </tr>
@@ -58,22 +59,38 @@ export default {
     display: none;
   }
 
-  .radio-label {
+  .radio-label-room {
     margin: 2px;
+    margin-bottom: 5px;
     padding: 5px;
-    background-color: lightblue;
-    border: 1px solid blue;
-    border-radius: 50px;
+    color: #345573;
+    background-color: #d4f4fe;
+    border-radius: 10px;
+    font-weight: bold;
   }
 
-  .radio-label:hover {
-    background-color: #ade7ff;
-    border: 1px solid blue;
-    border-radius: 25px;
+  .radio-label-booked {
+    font-weight: normal;
   }
 
-  :checked + .radio-label {
+  .radio-label-room:hover {
+    background-color: #c7e6f0;
+  }
+
+  :checked + .radio-label-room {
+    background-color: #bfe3f0;    
     border-width: 2px;
   }
 
+  table {
+    margin: 0 auto;
+  }
+
+  tbody {
+    text-align: left;
+  }
+
+  tr>td {
+    padding-bottom: 20px;
+  }
 </style>
